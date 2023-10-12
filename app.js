@@ -1,26 +1,44 @@
-'use strict'
+function updateGreeting() {
+    const nameInput = document.getElementById('nameInput');
+    const greetingElement = document.getElementById('greeting');
+    const name = nameInput.value.trim(); // Trim to remove leading/trailing spaces
 
-let username = prompt('What is your name?');
-console.log('Hello, ' + username);
-
-let time = prompt('What hour is it? (0-23)');
-let message;
-
-if(time <= 11){
-    message = 'Good Morning!';
-} else if (time <= 18){
-    message = 'Good Afternoon!';
-}  else if(time < 24){
-    message = "Good Evening!";
-} else {
-    message = "That hour does not exist!";
+    if (name) {
+        greetingElement.textContent = `Hello, ${name}!`;
+    } else {
+        showError(greetingElement, 'Please enter your name.');
+    }
 }
 
-// look for the "<h2><script src="app.js"></script></h2>" on line 20 in the HTML, this is where the message will write too!
-document.write('Hello ' + username + '! ' + message);
+function changePageColor() {
+    const colorInput = document.getElementById('colorInput');
+    const color = colorInput.value;
 
+    if (color) {
+        document.body.style.backgroundColor = color;
+    }
+}
 
+function showError(element, message) {
+    element.textContent = message;
+    element.style.color = 'red';
+}
 
+function inputIsValid(input) {
+    return input.trim() !== '';
+}
 
+function promptWithValidation(message, validationFunction) {
+    let input;
+    do {
+        input = prompt(message);
+    } while (!validationFunction(input));
+    return input;
+}
 
+// Example of using confirm() and prompt() with validation
+if (confirm("Do you want to customize the page?")) {
+    const userColor = promptWithValidation("Enter a color for the page background:", inputIsValid);
+    document.body.style.backgroundColor = userColor;
+}
 

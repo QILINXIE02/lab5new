@@ -1,36 +1,85 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+
     <title>Qilin's sandwich site</title>
     <style>
         #confirmation {
-            display: none; /* Initialize as hidden */
-        }
-        .error {
-            color: red;
+            display:inline ;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to Qilin's sandwich shop, but first enter some information for a 20% coupon for mobile orders</h1>
+    <h1>Welcome to Qilin's sandwich shop, but first enter some information for a 20% coupon for moible orders</h1>
+
+
     <!-- Dynamic Component 1 - User Input (Name) -->
     <label for="nameInput">Enter your name:</label>
     <input type="text" id="nameInput" placeholder="Your name">
-    <button onclick="updateGreeting()">Submit Name</button>
+    <button onclick="receiveName()">Submit Name</button>
 
-    <p>⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️</p>
 
-    <!-- Dynamic Component 2 - Conditional Statement -->
-    <p id="greeting"></p>
+--------------------------------
 
-    <!-- Dynamic Component 3 - Change Page Color -->
+    <!-- Dynamic Component 2 - User Input (Email) -->
+    <label for="emailInput">Enter your email address:</label>
+    <input type="email" id="emailInput" placeholder="Your email">
+    <button onclick="receiveEmail()">Submit Email</button>
+
+    <p>               ⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️                 </p>
+
+
+    once you submitted both your name and email address, please
+ 
+
+    <!-- Dynamic Component 3 - Conditional Statement (Confirmation) -->
+    <button id="confirmButton" onclick="confirmInformation()">Confirm Information</button>
+    <p id="confirmation">Information received.</p>
+-------------
+    <!-- Dynamic Component 4 - Set Page Color. downside: fonts are set to be black, so page corlor cannot be dark and be user -->
     <label for="colorInput">Set page color:</label>
     <input type="text" id="colorInput" placeholder="Enter a color (name or hex code)">
     <button onclick="changePageColor()">Change Color</button>
 
-    <script src="app.js"></script>
+    <div id="colorful">This text can change color!</div>
+
+
+    <script>
+        // Variables to store user input
+        let name = '';
+        let email = '';
+
+        // Dynamic Component 1 - User Input (Name)
+        function receiveName() {
+            name = document.getElementById('nameInput').value;
+        }
+
+        // Dynamic Component 2 - User Input (Email)
+        function receiveEmail() {
+            email = document.getElementById('emailInput').value;
+        }
+
+        // Dynamic Component 3 - Conditional Statement (Confirmation)
+        function confirmInformation() {
+            if (name !== '' && email !== '') {
+                document.getElementById('confirmation').style.display = 'block';
+            } else {
+                alert('Please enter your name and email address.');
+            }
+        }
+
+        // Dynamic Component 4 - Set Page Color
+        function changePageColor() {
+            const color = document.getElementById('colorInput').value;
+            document.body.style.backgroundColor = color;
+            document.getElementById('colorful').style.color = color;
+        }
+    </script>
 </body>
+</html>
+
+<p></p>
+
 
         
        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -96,7 +145,6 @@
      </footer>  
     <a href="https://highmid.github.io/hello-world/index">DeAndre's Github</a>
     </nav>
-    
     
 </body>
 </html>
