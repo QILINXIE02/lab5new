@@ -71,3 +71,72 @@
     
 </body>
 </html>
+
+
+<body>
+<h1>JavaScript Variables</h1>
+
+<p>In this example, x, y, and z are undeclared.</p>
+<p>They are automatically declared when first used.</p>
+
+<p id="demo"></p>
+
+<script>
+x = 5;
+y = 6;
+z = x + y;
+document.getElementById("demo").innerHTML =
+"The value of z is: " + z;
+</script>
+
+</body>
+</html>
+
+<head>
+    <title>Dynamic Web Page</title>
+</head>
+<body>
+    <h1>Welcome to the Dynamic Web Page</h1>
+
+    <!-- Dynamic Component 1 - User Input -->
+    <input type="text" id="textInput" placeholder="Enter text">
+    <button onclick="displayText()">Display Text</button>
+    <p id="outputText"></p>
+
+    <!-- Dynamic Component 2 - Conditional Statement -->
+    <input type="number" id="userGuess" placeholder="Enter a number">
+    <button onclick="guessNumber()">Guess the Number</button>
+    <p id="result"></p>
+
+    <!-- Dynamic Component 3 - Confirmation Dialog -->
+    <button onclick="confirmAction()">Delete Something</button>
+
+    <script>
+        // Dynamic Component 1 - User Input
+        function displayText() {
+            const inputText = document.getElementById('textInput').value;
+            document.getElementById('outputText').textContent = inputText;
+        }
+
+        // Dynamic Component 2 - Conditional Statement
+        function guessNumber() {
+            const userGuess = parseInt(document.getElementById('userGuess').value);
+            const randomNumber = Math.floor(Math.random() * 10) + 1;
+            if (userGuess === randomNumber) {
+                document.getElementById('result').textContent = 'Congratulations! You guessed the correct number!';
+            } else {
+                document.getElementById('result').textContent = 'Sorry, your guess is incorrect. The correct number was ' + randomNumber;
+            }
+        }
+
+        // Dynamic Component 3 - Confirmation Dialog
+        function confirmAction() {
+            const confirmed = confirm('Are you sure you want to delete something?');
+            if (confirmed) {
+                // Perform the deletion action here
+                alert('Deletion completed.');
+            } else {
+                alert('Deletion canceled.');
+            }
+        }
+    </script>

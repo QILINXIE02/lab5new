@@ -1,13 +1,27 @@
 
+
+body {
+    background-color: rgb(236, 233, 36);
+}
+
+body {
+    background-color: rgb(255, 0, 170);
+}
+><
+
+
+body {
+    background-color: #a900dd;
+}
+
 *{
-    border: 115px 
+    border: 10px 
 }
 body{
-    background-color:rgb(175, 189, 47);
+    background-color:rgb(111, 189, 47);
     margin: 0; 
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
-
 }
 
 Body{
@@ -20,22 +34,19 @@ Body{
     img src="https://th.bing.com/th/id/R.ad2b8da0ce1ceea798526b83e2325ab2?rik=lFK%2bdOMOX1gadw&riu=http%3a%2f%2fwww.eatgood4life.com%2fwp-content%2fuploads%2f2013%2f12%2fIMG_1900.jpg&ehk=aChNhoLpx3w9L4HaBI%2feBMHM5cMh7rnaRpXhzY9S%2bag%3d&risl=&pid=ImgRaw&r=0"/>{
         width: 30px;
         height: 22px;
-        section {img
-        width: 20px:
-        }
-
 }
 
 header {
-    background-color: rgb(184, 25, 157);
+    background-color: rgb(224, 206, 209);
     height: 100px;
     
     
 footer{
     text-align:center;
-    background-color: rgb(21, 163, 44);
+    background-color: rgb(224, 206, 209);
     height: 1000px;
 }
 
 footer p{
-    padding-top: 12px;
+    padding-top: 10000px;
+}
