@@ -36,7 +36,7 @@ function promptWithValidation(message, validationFunction) {
     return input;
 }
 
-// Example of using confirm() and prompt() with validation
+// using confirm() and prompt() with validation
 if (confirm("Do you want to customize the page?")) {
     const userColor = promptWithValidation("Enter a color for the page background:", inputIsValid);
     document.body.style.backgroundColor = userColor;
