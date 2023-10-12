@@ -18,7 +18,7 @@ header {
         border: 115px 
     }
 
-#sandwichImage {
+#chooseanimage {
     height: auto;
     width: auto ;
 
@@ -39,3 +39,10 @@ footer p{
     padding-top: 12px;
 }
 
+#sandwichImagesSection {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ee11db;
+    background-color: #f0ec0c;
+  
+}
