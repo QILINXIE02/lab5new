@@ -24,13 +24,20 @@ h1{
     margin-left: 20px;
     margin-right: 50px;
     color: (
-        #FF44AA 
-        #23F 
-        rgb(42, 95%, 35%) 
-        hsl(404, 95, 44,1) 
-        rgba(37,142,255,1) 
-        hsl(200, 95%, 55%) 
-        hsla(211, 100%, 70%, 0.75) 
+        
+hsl(200, 95%, 55%)
+
+rgba(37,142,255,1)
+
+#23F
+
+hsl(404, 95, 44,1)
+
+rgb(42, 95%, 35%)
+
+hsla(211, 100%, 70%, 0.75)
+
+#FF44AA
        );
     text-shadow: 5px 5px 5px white;
 }

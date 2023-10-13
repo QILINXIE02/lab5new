@@ -6,7 +6,7 @@ function updateGreeting() {
     if (name) {
         greetingElement.textContent = `Hey, ${name}! Thanks for visiting our shop. If you're ready to order, please call 1-503-###-#####`;
     } else {
-        showError(greetingElement, 'Please enter your name.');
+        showError(greetingElement, 'Please enter your name to start ordering.');
     }
 }
 
