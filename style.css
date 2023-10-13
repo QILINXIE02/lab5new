@@ -25,13 +25,13 @@ header {
 }
 
 header {
-    background-color: rgb(25, 179, 184);
+    background-color: rgb(75, 238, 84);
     height: 100px;
 }
     
 footer{
     text-align:center;
-    background-color: rgb(25, 179, 184);
+    background-color: rgb(75, 238, 84);
     height: 100px;
 }
 
@@ -42,7 +42,7 @@ footer p{
 #sandwichImagesSection {
     margin: 20px;
     padding: 20px;
-    border: 1px solid #ee11db;
-    background-color: #f0ec0c;
+    border: 1px solid #dd274e;
+    background-color: #ece921;
   
 }

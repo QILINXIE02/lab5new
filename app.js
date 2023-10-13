@@ -46,7 +46,7 @@ function displaySandwichImages() {
     if (!isNaN(sandwichCount) && sandwichCount > 0 && sandwichCount <= 100) {
         for (let i = 1; i <= sandwichCount; i++) {
             const image = document.createElement('img');
-            image.src = 'image_url_here'; // Replace with the actual image URL
+            image.src = 'https://media.istockphoto.com/vectors/sandwich-vector-icon-vector-id701007194?k=6&m=701007194&s=612x612&w=0&h=7xt_UwMubh9S9yF8GhbYvEzH393HseBd715UpXQbJNw='; // Replace with the actual image URL
             image.alt = `Sandwich ${i}`;
             sandwichImagesContainer.appendChild(image);
 
