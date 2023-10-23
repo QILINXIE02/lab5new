@@ -1,17 +1,21 @@
-<script>
+
     // Prompt the user for answers and store them in variables
-    var favoriteColor = prompt("What's your favorite color?");
-    var dreamDestination = prompt("Where is your dream vacation destination?");
-    var animalChoice = prompt("If you were an animal, what would you be?");
-    var favoriteFood = prompt("What's your favorite food?");
+    var name = prompt("Question 1: What is your name?");
+    var favoriteDay = prompt("Question 2: What's your favorite day of the week?");
+    var favoriteMonth = prompt("Question 3: What's your favorite month of the year?");
+    var goodDay = prompt("Question 4: Are you having a good day? (Yes or No)");
+
+    // Get the current date
+    var currentDate = new Date();
+    var dayOfWeek = currentDate.toLocaleDateString('en-US', { weekday: 'long' });
 
     // Concatenate the responses into an alert message
-    var alertMessage = "Greetings, " + favoriteColor + " traveler to " + dreamDestination + ". As a " + animalChoice + ", you must enjoy " + favoriteFood + "!";
+    var alertMessage = "Hello, " + name + "! Your favorite day is " + favoriteDay + ", your favorite month is " + favoriteMonth + ", and you are " + (goodDay.toLowerCase() === 'yes' ? "having a good day!" : "not having a good day.") + " Today is " + dayOfWeek + ".";
     alert(alertMessage);
 
     // Log the user's responses in the console
-    console.log("Favorite Color: " + favoriteColor);
-    console.log("Dream Destination: " + dreamDestination);
-    console.log("Animal Choice: " + animalChoice);
-    console.log("Favorite Food: " + favoriteFood);
-</script>
+    console.log("Response 1 - Name: " + name);
+    console.log("Response 2 - Favorite Day: " + favoriteDay);
+    console.log("Response 3 - Favorite Month: " + favoriteMonth);
+    console.log("Response 4 - Good Day: " + goodDay);
+
